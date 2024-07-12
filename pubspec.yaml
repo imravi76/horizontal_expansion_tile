@@ -1,7 +1,7 @@
 name: horizontal_expansion_tile
-description: "A new Flutter project."
+description: " A Flutter package for both android and iOS which provides an advance expansion tile to use in horizontal listview."
 version: 0.0.1
-homepage:
+homepage: https://github.com/imravi76/horizontal_expansion_tile
 
 environment:
   sdk: '>=3.3.4 <4.0.0'

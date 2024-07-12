@@ -11,29 +11,91 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages).
 -->
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+# HorizontalExpansionTile
+
+`HorizontalExpansionTile` is a custom Flutter widget that allows for an expansion tile that can expand horizontally or vertically, making it suitable for usage within horizontal `ListView`s or other flexible layouts where traditional `ExpansionTile` widgets cannot be used.
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+- Expandable tiles that can expand either horizontally or vertically.
+- Customizable titles, subtitles, leading, and trailing widgets.
+- Smooth animations for expanding and collapsing.
+- Suitable for use inside horizontal `ListView`s.
+- Flexibility to adjust cross-axis alignment.
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+To start using `HorizontalExpansionTile`, add it to your `pubspec.yaml` file:
+
+```yaml
+dependencies:
+  horizontal_expansion_tile: ^0.0.1
+```
+
+Then, run `flutter pub get` to install the package.
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+Here is a basic example of how to use the `HorizontalExpansionTile`:
 
 ```dart
-const like = 'sample';
+import 'package:flutter/material.dart';
+import 'package:horizontal_expansion_tile/horizontal_expansion_tile.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(title: Text('Horizontal Expansion Tile Example')),
+        body: ListView(
+          scrollDirection: Axis.horizontal,
+          children: [
+            HorizontalExpansionTile(
+              title: Text('Tile 1'),
+              subtitle: Text('Subtitle 1'),
+              leading: Icon(Icons.label),
+              trailing: Icon(Icons.expand_more),
+              axis: Axis.horizontal,
+              children: [
+                Container(width: 100, color: Colors.red, child: Text('Child 1')),
+                Container(width: 100, color: Colors.blue, child: Text('Child 2')),
+              ],
+            ),
+            HorizontalExpansionTile(
+              title: Text('Tile 2'),
+              subtitle: Text('Subtitle 2'),
+              leading: Icon(Icons.label),
+              trailing: Icon(Icons.expand_more),
+              axis: Axis.horizontal,
+              children: [
+                Container(width: 100, color: Colors.green, child: Text('Child 1')),
+                Container(width: 100, color: Colors.yellow, child: Text('Child 2')),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
 ```
+
+For more detailed examples, check the `/example` folder in the package repository.
 
 ## Additional information
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+For more information about this package, including how to contribute, file issues, or seek support, please visit the [GitHub repository](https://github.com/imravi76/horizontal_expansion_tile).
+
+To contribute to the project, please fork the repository, create a feature branch, and submit a pull request. We welcome contributions and will review them as soon as possible.
+
+If you encounter any issues, please file them in the GitHub repository, and we will respond as promptly as we can.
+
+Thank you for using `HorizontalExpansionTile`!
+```
+
+Feel free to adjust the links, repository URLs, and other placeholders as necessary. This `README.md` file provides a comprehensive overview of the package, its features, usage instructions, and additional information for potential users and contributors.
