@@ -96,6 +96,3 @@ To contribute to the project, please fork the repository, create a feature branc
 If you encounter any issues, please file them in the GitHub repository, and we will respond as promptly as we can.
 
 Thank you for using `HorizontalExpansionTile`!
-```
-
-Feel free to adjust the links, repository URLs, and other placeholders as necessary. This `README.md` file provides a comprehensive overview of the package, its features, usage instructions, and additional information for potential users and contributors.
